@@ -3,7 +3,7 @@ package org.example;
 public class Caneta {
     public String modelo;
     public String cor;
-    private float ponta;
+    public float ponta;
     protected int carga;
     protected boolean tampada;
 
@@ -16,7 +16,7 @@ public class Caneta {
     }
 
     public void rabiscar() {
-        if (this.tampada == true) {
+        if (this.tampada) {
             System.out.println("ERRO! Não posso rabiscar!");
         } else {
             System.out.println("Estou rabiscando");
@@ -27,7 +27,7 @@ public class Caneta {
         this.tampada = true;
     }
 
-    proteced void destampar() {
+    protected void destampar() {
         this.tampada = false;
     }
 }
